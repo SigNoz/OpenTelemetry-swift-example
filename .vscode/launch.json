@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:signoz-swift-app}",
+            "name": "Debug DiceApp",
+            "program": "${workspaceFolder:signoz-swift-app}/.build/debug/DiceApp",
+            "preLaunchTask": "swift: Build Debug DiceApp"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:signoz-swift-app}",
+            "name": "Release DiceApp",
+            "program": "${workspaceFolder:signoz-swift-app}/.build/release/DiceApp",
+            "preLaunchTask": "swift: Build Release DiceApp"
+        }
+    ]
+}
