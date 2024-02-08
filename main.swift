@@ -21,9 +21,9 @@ var resources = DefaultResources().get()
 let instrumentationScopeName = "SwiftExample"
 let instrumentationScopeVersion = "semver:0.1.0"
 
-let otlpConfiguration: OtlpConfiguration = OtlpConfiguration(timeout: TimeInterval(10), headers: [("signoz-access-token", "<YOUR_INGESTION_KEY>")])
+let otlpConfiguration: OtlpConfiguration = OtlpConfiguration(timeout: TimeInterval(10), headers: [("signoz-access-token", "272085dc-0763-4ddb-b2b5-5bcebf896698")])
 
-let grpcChannel = ClientConnection.usingPlatformAppropriateTLS(for: MultiThreadedEventLoopGroup(numberOfThreads:1)).connect(host: <URL>, port: <PORT>)
+let grpcChannel = ClientConnection.usingPlatformAppropriateTLS(for: MultiThreadedEventLoopGroup(numberOfThreads:1)).connect(host: "https://ingest.in.signoz.cloud", port: 443)
 
 let otlpTraceExporter = OtlpTraceExporter(channel: grpcChannel,
                                       config: otlpConfiguration)
